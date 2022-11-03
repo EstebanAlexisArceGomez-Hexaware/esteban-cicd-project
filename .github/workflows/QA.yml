@@ -27,8 +27,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Deploy to netlify
-        id: deployment
-        #uses: jsmrcaga/action-netlify-deploy@v1.7.1
+        uses: netlify/actions/cli@master
         env:
           NETLIFY_AUTH_TOKEN: zloEhMHvxOMG5RyIqO43IaGw87FCIkMeylBCxkWo9x8
           NETLIFY_SITE_ID: 26fe9301-11dd-4f83-91b6-fd2208d86871
