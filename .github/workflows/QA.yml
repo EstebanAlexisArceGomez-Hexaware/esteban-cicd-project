@@ -7,6 +7,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment:
+      name: QA
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -21,8 +23,6 @@ jobs:
       - name: Set homepage
         run: npm run setHomePage
       - name: Upload netlify
-        environment:
-          name: QA
         uses: jsmrcaga/action-netlify-deploy@v1.1.0
         with:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
