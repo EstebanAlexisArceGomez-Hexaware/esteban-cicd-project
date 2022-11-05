@@ -36,12 +36,12 @@ jobs:
           branch: "develop/qa"
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Approve PR
-        uses: juliangruber/approve-pull-request-action@v2.0.0
+        uses: juliangruber/approve-pull-request-action@v1
         with:
           number: 1
           github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Merge PR
-        uses: juliangruber/merge-pull-request-action@v2.0.0
+        uses: juliangruber/merge-pull-request-action@v1
         with:
           number: 1
           github-token: ${{ secrets.GITHUB_TOKEN }}
