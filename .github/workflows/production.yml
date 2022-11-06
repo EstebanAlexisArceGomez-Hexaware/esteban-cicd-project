@@ -1,5 +1,5 @@
 on:
-  push:
+  pull_request:
     branches: ["main"]
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -26,6 +26,8 @@ jobs:
         run: CI=false npm run build
       - name: Run test
         run: npm run test
+      - name: Set gh homepage
+        run: npm run setGHHomePage
       - name: Upload page artifact
         uses: actions/upload-pages-artifact@v1.0.4
         with:

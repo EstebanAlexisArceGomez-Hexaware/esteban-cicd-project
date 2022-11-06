@@ -1,6 +1,5 @@
 name: Test Code
 on:
-  pull_request:
   push:
     branches:
       - develop/*
@@ -34,4 +33,16 @@ jobs:
       #     commit-message: PR
       #     title: QA PR
       #     body: Changes added
-      #     branch: develop/qa
+      #     branch: "develop/qa"
+      #     token: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Approve PR
+      #   uses: juliangruber/approve-pull-request-action@v1
+      #   with:
+      #     number: 1
+      #     github-token: ${{ secrets.APPROVER_TOKEN }}
+      # - name: Merge PR
+      #   uses: juliangruber/merge-pull-request-action@v1
+      #   with:
+      #     number: 1
+      #     github-token: ${{ secrets.MERGE }}
+      #     method: squash

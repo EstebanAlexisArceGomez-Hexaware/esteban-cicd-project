@@ -23,7 +23,8 @@
         "eject": "react-scripts eject",
         "lint": "eslint --cache . --ext ts,tsx",
         "prepare": "husky install",
-        "setHomePage": "node setHomePage.js"
+        "setHomePage": "node setHomePage.js url=https://ubiquitous-gnome-b2f28a.netlify.app/",
+        "setGHHomePage": "node setHomePage.js url=https://estebanalexisarcegomez-hexaware.github.io/esteban-cicd-project/"
     },
     "eslintConfig": {
         "extends": [
