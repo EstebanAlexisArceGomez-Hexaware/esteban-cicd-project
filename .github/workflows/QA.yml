@@ -26,20 +26,20 @@ jobs:
         with:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-      - name: Create PR
-        uses: peter-evans/create-pull-request@v4
-        with:
-          base: main
-          commit-message: PR
-          title: QA PR
-          body: Changes added
-          branch: "develop/qa"
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Approve PR
-        uses: juliangruber/approve-pull-request-action@v1
-        with:
-          number: 1
-          github-token: ${{ secrets.APPROVER_TOKEN }}
+      # - name: Create PR
+      #   uses: peter-evans/create-pull-request@v4
+      #   with:
+      #     base: main
+      #     commit-message: PR
+      #     title: QA PR
+      #     body: Changes added
+      #     branch: "develop/qa"
+      #     token: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Approve PR
+      #   uses: juliangruber/approve-pull-request-action@v1
+      #   with:
+      #     number: 1
+      #     github-token: ${{ secrets.APPROVER_TOKEN }}
       # - name: Merge PR
       #   uses: juliangruber/merge-pull-request-action@v1
       #   with:
