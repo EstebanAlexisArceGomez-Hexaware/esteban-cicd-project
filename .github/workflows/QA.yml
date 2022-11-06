@@ -40,9 +40,9 @@ jobs:
         with:
           number: 1
           github-token: ${{ secrets.APPROVER_TOKEN }}
-      - name: Merge PR
-        uses: juliangruber/merge-pull-request-action@v1
-        with:
-          number: 1
-          github-token: ${{ secrets.MERGE }}
-          method: squash
+      # - name: Merge PR
+      #   uses: juliangruber/merge-pull-request-action@v1
+      #   with:
+      #     number: 1
+      #     github-token: ${{ secrets.MERGE }}
+      #     method: squash
