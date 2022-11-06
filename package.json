@@ -2,7 +2,7 @@
     "name": "esteban-cicd-project",
     "version": "0.1.0",
     "private": true,
-    "homepage": "https://ubiquitous-gnome-b2f28a.netlify.app/",
+    "homepage": "https://estebanalexisarcegomez-hexaware.github.io/esteban-cicd-project/",
     "dependencies": {
         "@testing-library/jest-dom": "^5.16.5",
         "@testing-library/react": "^13.4.0",
@@ -24,7 +24,7 @@
         "lint": "eslint --cache . --ext ts,tsx",
         "prepare": "husky install",
         "setHomePage": "node setHomePage.js url=https://ubiquitous-gnome-b2f28a.netlify.app/",
-        "setGHHomePage": "node setHomePage.js url=https://estebanalexisarcegomez-hexaware.github.io/esteban-cicd-project/"
+        "setGHHomePage": "node setHomePage.js url=https://EstebanAlexisArceGomez-Hexaware.github.io/esteban-cicd-project/"
     },
     "eslintConfig": {
         "extends": [
