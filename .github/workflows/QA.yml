@@ -21,16 +21,28 @@ jobs:
         run: npm run test
       - name: Set homepage
         run: npm run setHomePage
-      - name: Upload netlify
+      - name: Deploy to netlify
         uses: jsmrcaga/action-netlify-deploy@v1.1.0
         with:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+  
+  PR:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with: 
+          fetch-depth: 0
+      - name: Create PR
+        run: gh pr create --fill --body "Auto PR"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       # - name: Create PR
       #   uses: peter-evans/create-pull-request@v4
       #   with:
       #     base: main
-      #     commit-message: PR
+      #     commit-message: New deployment
       #     title: QA PR
       #     body: Changes added
       #     branch: "develop/qa"
